@@ -1,0 +1,74 @@
+/* hamburger menu */
+
+.hamburgNav {
+	top: 20px;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.navIcon {
+	position: absolute;
+	background: 0;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+}
+
+.iconBar {
+	background: #fff;
+	width: 25px;
+	height: 3px;
+	margin-bottom: 5px;
+	display: block;
+	border-radius: 1px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+}
+
+.hideContent {
+	display: none;
+}
+
+.showContent {
+	display: block;
+	animation: fadeInDown 0.3s ease;
+}
+
+/* responsive css */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+	.hamburgNav {
+		top: 25px;
+	}
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+
+	.hamburgNav {
+		top: 32px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.hamburgNav {
+		display: none;
+	}
+}
+
+/* animation */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

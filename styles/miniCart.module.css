@@ -1,0 +1,64 @@
+
+/* mini cart */
+
+.cartItem {
+	display: flex;
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 25px;
+}
+
+/* image */
+
+.image {
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin-right: 15px;
+	border: 2px solid #f3f3f3;
+}
+
+/* description */
+
+.description {
+	position: relative;
+	overflow: hidden;
+	width: 195px;
+	margin-bottom: 15px;
+}
+
+.name {
+	font-size: 14px;
+	font-weight: 500;
+	display: block;
+	text-align: left;
+	color: #FC6800;
+}
+
+.price {
+	display: flex;
+	align-items: flex-end;
+	font-size: 13px;
+	color: #888;
+	margin-top: 3px;
+}
+
+.price b {
+	color: #222;
+	font-size: 15px;
+	margin-right: 25px;
+	line-height: normal;
+}
+
+.amount {
+	min-height: 25.5px;
+}
+
+.quantity {
+	font-size: 15px;
+	color: #444;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-weight: 400;
+}
