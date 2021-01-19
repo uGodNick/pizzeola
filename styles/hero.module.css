@@ -1,0 +1,120 @@
+/* hero area */
+
+/* carousel */
+
+.carousel {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.stage {
+	display: flex;
+	position: relative;
+	transition: all 0.25s ease 0s;
+}
+
+.item {
+	width: default;
+	background-size: cover;
+	background-position: center;
+	background-color: #ddd;
+	touch-action: pan-y;
+}
+
+/* carousel navigation */
+
+.nav {
+	opacity: 0;
+}
+
+.prevBtn,
+.nextBtn {
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	background: transparent;
+	transition: .3s;
+	transform: rotate(45deg);
+	z-index: 10;
+	cursor: pointer;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+	border-color: rgba(255, 255, 255, 1);
+}
+
+.prevBtn:hover .arrowIcon::before,
+.nextBtn:hover .arrowIcon::before,
+.prevBtn:hover .arrowIcon::after,
+.nextBtn:hover .arrowIcon::after {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.nextBtn {
+	right: 50px;
+}
+
+.prevBtn {
+	left: 40px;
+}
+
+/* navigation arrows */
+
+.arrowIcon { 
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.arrowIcon::before,
+.arrowIcon::after {
+	display: block;
+	position: absolute;
+	content: "";
+	background-color: rgba(255, 255, 255, 0.4);
+	transition: .3s;
+}
+
+.nextBtn .arrowIcon::before {
+	top: 16px;
+	right: 8px;
+	width: 9px;
+	height: 2px;
+}
+
+.nextBtn .arrowIcon::after {
+	top: 16px;
+	right: 6px;
+	width: 2px;
+	height: 11px;
+}
+
+.prevBtn .arrowIcon::before {
+	bottom: 13px;
+	left: 8px;
+	width: 11px;
+	height: 2px;
+}
+
+.prevBtn .arrowIcon::after {
+	bottom: 15px;
+	left: 8px;
+	width: 2px;
+	height: 9px;
+}
+
+/* responsive css */
+
+@media (min-width: 768px) {
+	.nav {
+		opacity: 1;
+	}
+}
