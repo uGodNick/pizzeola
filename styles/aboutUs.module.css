@@ -1,0 +1,142 @@
+
+/* about us area */
+
+.aboutUs {
+	padding: 50px 0;
+	margin-top: 50px;
+	border-bottom: 1px solid #eee;
+}
+
+/* content area */
+
+.content {
+	border: 5px solid #eee;
+	padding: 50px;
+}
+
+.title {
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.title h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.title::after {
+	position: absolute;
+	content: "";
+	width: 90px;
+	height: 3px;
+	bottom: -20px;
+	left: 50%;
+	background: #FF6900;
+	margin-left: -45px;
+}
+
+.content p {
+	margin-top: 40px;
+}
+
+.sign img {
+	width: 120px;
+}
+
+.bg {
+	display: none;
+}
+
+/* faciliy area */
+
+.faciliy {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.faciliy i {
+	height: 60px;
+}
+
+.faciliy svg {
+	width: 52px;
+	height: 52px;
+}
+
+.faciliy h4 {
+	margin-top: 10px;
+	position: relative;
+	z-index: 1;
+	font-size: 18px;
+}
+
+.faciliy h4::before,
+.faciliy h4::after {
+	position: absolute;
+	content: "";
+	width: 16px;
+	height: 2px;
+	bottom: 12px;
+	background-color: #444;
+}
+
+.faciliy h4::before {
+	margin-left: -40px;
+}
+
+.faciliy h4::after {
+	margin-left: 20px;
+}
+
+.faciliy p {
+	font-size: 14px;
+}
+
+/* responsive css */
+
+@media (min-width: 767px) {
+	.bg {
+		display: block;
+		margin: -75px 0 0 -50px;
+	}
+
+	.aboutUs {
+		padding: 80px 0;
+	}
+
+	.title h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.faciliy {
+		margin-top: 100px;
+	}
+
+	.faciliy h4 {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	.aboutUs {
+		padding: 100px 0;
+	}
+
+	.title h2 {
+		font-size: 40px;
+		line-height: 55px;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+
+	.faciliy h4 {
+		font-size: 1.5rem;
+	}
+
+	.faciliy p {
+		font-size: 15px;
+	}
+}
