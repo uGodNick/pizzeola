@@ -8,6 +8,7 @@ import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import AboutUs from '../components/aboutUs/aboutUs';
 import Menu from '../components/menu/menu';
+import CTA from '../components/CTA/CTA';
 
 
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
 			<AboutUs/>
 			
 			<Menu rowsLimit={1} title/>
+
+			<CTA/>
 		</>
 	);
 }
