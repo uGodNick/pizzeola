@@ -7,6 +7,7 @@ import Spinner from '../components/spinner';
 import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
 import AboutUs from '../components/aboutUs/aboutUs';
+import Menu from '../components/menu/menu';
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
 
 			<AboutUs/>
 			
+			<Menu rowsLimit={1} title/>
 		</>
 	);
 }

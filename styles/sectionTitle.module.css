@@ -1,0 +1,46 @@
+
+/* section title schedule */
+
+.title {
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.title h2 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.title::after {
+	position: absolute;
+	content: "";
+	width: 90px;
+	height: 3px;
+	bottom: -20px;
+	left: 50%;
+	background: #FF6900;
+	margin-left: -45px;
+}
+
+/* responsive css */
+
+@media (min-width: 767px) {
+
+	.title h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+}
+
+@media (min-width: 1000px) {
+
+	.title h2 {
+		font-size: 40px;
+		line-height: 55px;
+		letter-spacing: 1px;
+	}
+	
+}

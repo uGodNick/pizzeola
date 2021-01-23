@@ -2,7 +2,6 @@
 /* about us area */
 
 .aboutUs {
-	padding: 50px 0;
 	margin-top: 50px;
 	border-bottom: 1px solid #eee;
 }
@@ -12,28 +11,6 @@
 .content {
 	border: 5px solid #eee;
 	padding: 50px;
-}
-
-.title {
-	position: relative;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.title h2 {
-	font-size: 24px;
-	line-height: 30px;
-}
-
-.title::after {
-	position: absolute;
-	content: "";
-	width: 90px;
-	height: 3px;
-	bottom: -20px;
-	left: 50%;
-	background: #FF6900;
-	margin-left: -45px;
 }
 
 .content p {
@@ -101,15 +78,6 @@
 		margin: -75px 0 0 -50px;
 	}
 
-	.aboutUs {
-		padding: 80px 0;
-	}
-
-	.title h2 {
-		font-size: 30px;
-		line-height: 40px;
-	}
-
 	.faciliy {
 		margin-top: 100px;
 	}
@@ -120,17 +88,6 @@
 }
 
 @media (min-width: 1000px) {
-
-	.aboutUs {
-		padding: 100px 0;
-	}
-
-	.title h2 {
-		font-size: 40px;
-		line-height: 55px;
-		font-weight: 700;
-		letter-spacing: 1px;
-	}
 
 	.faciliy h4 {
 		font-size: 1.5rem;
