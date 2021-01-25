@@ -15,16 +15,20 @@
 
 @media(min-width: 767px) {
 	.item {
-		float: left;
+		position: absolute;
+	}
+
+	.normal {
+		height: 300px;
 		width: 19%;
 	}
 
 	.wide {
+		height: 300px;
 		width: 39%;
 	}
 
 	.large {
-		float: right;
 		height: 620px;
 		width: 39%;
 	}

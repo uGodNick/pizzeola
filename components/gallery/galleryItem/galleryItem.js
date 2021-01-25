@@ -4,19 +4,23 @@ import PropTypes from 'prop-types';
 // styles
 import styles from '../../../styles/galleryItem.module.css';
 
-export default function GalleryItem({item}) {
+export default function GalleryItem({item, position, id}) {
 
 	useEffect(() => {
-		const itemList = document.querySelectorAll(`.${styles.item}`);
-		itemList[item.id - 1].style.backgroundImage = `url(${item.background})`;
+		const photo = document.querySelector(`#photo-${id}`);
+		photo.style.backgroundImage = `url(${item.background})`;
+		photo.style.top = `${position.top}px`;
+		photo.style.left = `${position.left}px`;
 	});
 
 	return(
-		<div className={`${styles.item} ${styles[item.size]}`}></div>
+		<div id={`photo-${id}`} className={`${styles.item} ${styles[item.size]}`}></div>
 	);
 }
 
 GalleryItem.propTypes = {
-	item: PropTypes.object
+	item: PropTypes.object,
+	position: PropTypes.object,
+	id: PropTypes.number
 };
 

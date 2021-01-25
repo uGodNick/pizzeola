@@ -8,7 +8,6 @@
 .list {
 	overflow: hidden;
 	margin-top: 50px;
-	width: 100%;
 }
 
 /* responsive css */
@@ -16,6 +15,7 @@
 @media(min-width: 767px) {
 
 	.list {
+		position: relative;
 		height: 640px;
 	}
 
