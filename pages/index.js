@@ -11,6 +11,7 @@ import Menu from '../components/menu/menu';
 import CTA from '../components/CTA/CTA';
 import Gallery from '../components/gallery/gallery';
 import Testimonial from '../components/testimonial/testimonial';
+import Ranking from '../components/ranking/ranking';
 
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
 			<Gallery rowLimit={{mobile: 6, desktop: 2}}/>
 
 			<Testimonial/>
+
+			<Ranking/>
 		</div>
 	);
 }
