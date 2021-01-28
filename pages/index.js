@@ -9,14 +9,16 @@ import Hero from '../components/hero/hero';
 import AboutUs from '../components/aboutUs/aboutUs';
 import Menu from '../components/menu/menu';
 import CTA from '../components/CTA/CTA';
+import Gallery from '../components/gallery/gallery';
+import Testimonial from '../components/testimonial/testimonial';
 
 
 export default function Home() {
 	return (
-		<>
+		<div>
 			<Head>
 				<title> Pizzeola </title>
-				<link rel="shortcut icon" href="/favicon.ico" />
+				<link rel="shortcut icon" href="/favicon.svg" />
 			</Head>
 			{/* <Spinner/> */}
 			<Header/>
@@ -28,6 +30,10 @@ export default function Home() {
 			<Menu rowsLimit={1} title/>
 
 			<CTA/>
-		</>
+
+			<Gallery rowLimit={{mobile: 6, desktop: 2}}/>
+
+			<Testimonial/>
+		</div>
 	);
 }

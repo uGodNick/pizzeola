@@ -1,0 +1,82 @@
+
+/* testimonial item */
+
+.item {
+	border: 5px solid #eee;
+	padding: 50px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.reviewMark {
+	display: inline-block;
+	padding: 10px 25px;
+}
+
+.reviewMark svg {
+	height: 20px;
+	margin: 0 6px;
+}
+
+.item h2 {
+	font-size: 15px;
+	line-height: 28px;
+	color: #fff;
+	margin: 35px 0;
+}
+
+.item p {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 5px 20px;
+	z-index: 99;
+	display: inline-block;
+	background: #fff;
+	color: #444;
+}
+
+/* responsive css */
+
+@media (min-width: 480px) {
+	
+	.item {
+		padding: 7px;
+	}
+
+	.item h2 {
+		margin: 10px 20px;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.reviewMark svg {
+		height: 27px;
+		margin: 0 9px;
+	}
+
+	.item {
+		padding: 50px;
+	}
+
+	.item h2 {
+		font-size: 20px;
+		line-height: 36px;
+		margin: 35px 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.item h2 {
+		font-size: 28px;
+		line-height: 44px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.item h2 {
+		font-size: 31px;	
+	}
+}

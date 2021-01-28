@@ -12,24 +12,19 @@ import styles from '../../styles/gallery.module.css';
 
 export default function Gallery({rowLimit}) {
 
-	const [listWidth, updateListWidth] = useState(0);
-	const [listHeight, updateListHeight] = useState(0);
+	const [photoList, updatePhotoList] = useState(0);
 
 	useEffect(() => {
-		const photoList = document.querySelector(`.${styles.list}`);
-
-		updateListWidth(
-			photoList.offsetWidth
+		updatePhotoList(
+			document.querySelector(`.${styles.list}`)
 		);
-
-		photoList.style.height = `${listHeight}px`;
-
 	});
 
 	function renderPhotos(items) {
 		const photos = [];
 
-		let offset = listWidth * 0.19,
+		let listWidth = photoList.offsetWidth,		
+			offset = listWidth * 0.19,
 			indent = listWidth * 0.01,
 			item = 0,		
 			row = 0,
@@ -49,13 +44,18 @@ export default function Gallery({rowLimit}) {
 
 		let totalRows = Math.ceil(totalCols / 5);
 
+		
 		if (rowLimit) {
-			totalRows = rowLimit;
+			if (listWidth <= 545) {
+				totalRows = rowLimit.mobile;
+			} else {
+				totalRows = rowLimit.desktop;
+			}
+		}
+		if (photoList !== 0) {
+			photoList.style.height = `${totalRows * 320}px`;
 		}
 
-		if (listHeight === 0) {
-			updateListHeight(totalRows * 320);
-		}
 
 		while(row < totalRows) {
 			
@@ -150,7 +150,7 @@ export default function Gallery({rowLimit}) {
 }
 
 Gallery.propTypes = {
-	rowLimit: PropTypes.number
+	rowLimit: PropTypes.object
 };
 
 // temporary data
