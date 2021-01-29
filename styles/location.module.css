@@ -1,0 +1,84 @@
+
+/* location area */
+
+.location {
+	background-size: cover;
+	background-position: center;
+	background-color: #ddd;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.location::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: .8;
+	z-index: -1;
+}
+
+/* title */
+
+.title {
+	display: inline-block;
+	border: 5px solid #eee;
+	padding: 50px;
+}
+
+.title h2 {
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+.title p {
+	color: #FF6900;
+	margin: 0;
+	font-size: 15px;
+	line-height: 28px;
+}
+
+/* responsive css */
+
+@media (min-width: 480px) {
+
+	.title p {
+		font-size: 18px;
+	}
+
+}
+
+@media (min-width: 767px) {
+
+	.title h2 {
+		font-size: 30px;
+	}
+
+	.title p {
+		font-size: 25px;
+		line-height: 42.5px;
+	}
+	
+}
+
+@media (min-width: 991px) {
+
+	.title h2 {
+		font-size: 36px;
+	}
+
+	.title p {
+		font-size: 30px;
+	}
+
+}

@@ -13,6 +13,7 @@ import Gallery from '../components/gallery/gallery';
 import Testimonial from '../components/testimonial/testimonial';
 import Ranking from '../components/ranking/ranking';
 import Blog from '../components/blog/blog';
+import Location from '../components/location/location';
 
 
 export default function Home() {
@@ -40,6 +41,8 @@ export default function Home() {
 			<Ranking/>
 
 			<Blog itemLimit={3} onHomePage/>
+
+			<Location/>
 		</div>
 	);
 }
