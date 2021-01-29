@@ -12,7 +12,7 @@ import styles from '../../styles/contact.module.css';
 
 const MyMapComponent = compose(
 	withProps({
-	  googleMapURL: 'https://www.google.ru/maps/place/Rubirosa+Ristorante/@40.7227358,-73.9962388,21z/data=!4m5!3m4!1s0x89c2598f361dc3b3:0xea0bcb0a8807f54c!8m2!3d40.7227471!4d-73.9962025',
+	  googleMapURL: 'https://maps.google.com/maps/api/js?sensor=false',
 	  loadingElement: <div style={{ height: '100%' }} />,
 	  containerElement: <div style={{ height: '400px' }} />,
 	  mapElement: <div style={{ height: '100%' }} />,

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {Container, Row, Col} from 'react-bootstrap';
 
 // components
+import Logo from '../logo';
 import HamburgNav from './hamburgNav/hamburgNav';
 import Navigation from './navigation/navigation';
 import MiniCart from './miniCart/miniCart';
@@ -53,11 +54,7 @@ export default function Header () {
 
 					<Col lg={2} md={12}>
 						<HamburgNav/>
-						<div className={styles.logo}>
-							<Link href="/">
-								<a>Pizze<b>o</b>la</a>
-							</Link>
-						</div>
+						<Logo/>
 					</Col>
 
 					<Col lg={8} md={0}>

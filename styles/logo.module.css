@@ -1,0 +1,62 @@
+
+/* logo */
+
+.logo {
+	text-align: center;
+	padding: 12px;
+}
+
+.logo a {
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 2px 4px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #fff;
+	display: inline-block;
+	border: 2px solid #fff;
+}
+
+.logo b {
+	color: #FA5E2E;
+}
+
+/* responsive css */
+
+@media (min-width: 480px) {
+
+	.logo a {
+		font-size: 20px;
+		padding: 2px 4px;
+	}
+}
+
+@media (min-width: 767px) {
+
+	.logo a {
+		font-size: 22px;
+		padding: 4px 8px;
+	}
+
+}
+
+@media (min-width: 991px) {
+
+	.logo {
+		text-align: left;
+	}
+
+	.logo a {
+		padding: 2px 4px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	.logo a {
+		padding: 0 12px;
+		font-size: 26px;
+	}
+
+}

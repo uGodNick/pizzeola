@@ -1,0 +1,35 @@
+
+/* footer area */
+
+.footer {
+	background: #1E201F;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.copyRight {
+	display: none;
+}
+
+.social {
+	display: block;
+	text-align: center;
+}
+
+.social svg {
+	width: 17px;
+	height: 17px;
+	margin: 10px;
+}
+
+@media (min-width: 767px) {
+	.copyRight {
+		display: block;
+	}
+
+	.social {
+		display: inline-block;
+	}
+}

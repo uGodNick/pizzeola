@@ -21,28 +21,6 @@
 	background: #222;
 }
 
-/* logo */
-
-.logo {
-	text-align: center;
-	padding: 12px;
-}
-
-.logo a {
-	text-transform: uppercase;
-	font-size: 16px;
-	padding: 2px 4px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	color: #fff;
-	display: inline-block;
-	border: 2px solid #fff;
-}
-
-.logo b {
-	color: #FA5E2E;
-}
-
 /* order carts */
 
 .cartContact {
@@ -146,23 +124,10 @@
 
 /* responsive css */
 
-@media (min-width: 480px) {
-
-	.logo a {
-		font-size: 20px;
-		padding: 2px 4px;
-	}
-}
-
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
 	.fixedHeaderArea {
 		height: 75px;
-	}
-
-	.logo a {
-		font-size: 22px;
-		padding: 4px 8px;
 	}
 
 	.cartContact {
@@ -187,15 +152,7 @@
 	}
 }
 
-@media (min-width: 992px) {
-
-	.logo {
-		text-align: left;
-	}
-
-	.logo a {
-		padding: 2px 4px;
-	}
+@media (min-width: 991px) {
 
 	.cartContact {
 		top: 50%;
@@ -212,12 +169,7 @@
 	}
 }
 
-@media (min-width: 1199px) {
-
-	.logo a {
-		padding: 0 12px;
-		font-size: 26px;
-	}
+@media (min-width: 1200px) {
 
 	.boxedBtn {
 		font-size: 15px;
