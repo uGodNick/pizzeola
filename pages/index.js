@@ -16,6 +16,7 @@ import Blog from '../components/blog/blog';
 import Location from '../components/location/location';
 import Contact from '../components/contact/contact';
 import Footer from '../components/footer/footer';
+import ToTopBtn from '../components/toTopBtn';
 
 
 export default function Home() {
@@ -49,6 +50,8 @@ export default function Home() {
 			<Contact/>
 
 			<Footer/>
+
+			<ToTopBtn/>
 		</div>
 	);
 }

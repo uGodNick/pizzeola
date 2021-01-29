@@ -1,0 +1,32 @@
+
+/* to top */
+
+.btn {
+	background-color: #FF6900;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	bottom: 3em;
+	right: 1em;
+	line-height: 32px;
+	border-radius: 0;
+	font-size: 20px;
+	text-align: center;
+	position: fixed;
+	transition: .3s;
+	transform: rotate(45deg);
+	z-index: 9999;
+}
+
+/* responsive css */
+
+@media (min-width: 767px) {
+
+	.btn {
+		width: 45px;
+		height: 45px;
+		bottom: 4em;
+		right: 2em;
+		line-height: 45px;
+	}
+}
