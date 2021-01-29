@@ -1,0 +1,30 @@
+
+/* contact area */
+
+/* contact form */
+
+.contactForm {
+	border: 1px solid #eee;
+	margin-top: 50px;
+	padding: 16px;
+}
+
+/* map area */
+
+.map {
+	margin-top: 50px;
+}
+
+/* responsive css */
+
+@media (min-width: 767px) {
+	.contactForm {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 991px) {
+	.contactForm {
+		padding: 30px;
+	}
+}

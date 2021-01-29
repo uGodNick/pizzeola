@@ -14,6 +14,7 @@ import Testimonial from '../components/testimonial/testimonial';
 import Ranking from '../components/ranking/ranking';
 import Blog from '../components/blog/blog';
 import Location from '../components/location/location';
+import Contact from '../components/contact/contact';
 
 
 export default function Home() {
@@ -43,6 +44,8 @@ export default function Home() {
 			<Blog itemLimit={3} onHomePage/>
 
 			<Location/>
+
+			<Contact/>
 		</div>
 	);
 }

@@ -16,7 +16,7 @@ export default function BlogItem({item}) {
 		<div id={`blog-item-${item.id}`} className={styles.item}>
 			<div className={styles.content}>
 				<p>{item.date}</p>
-				<Link href=''>
+				<Link href='/'>
 					<a>
 						<h5>{item.title}</h5>
 					</a>

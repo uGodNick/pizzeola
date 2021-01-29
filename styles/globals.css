@@ -67,8 +67,8 @@ select {
 	width: 100%;
 	background: transparent;
 	border: 1px solid #ddd;
-	padding: 15px 15px;
-	font-size: 14px;
+	padding: 12px;
+	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 1px;
 	transition: .3s;
@@ -97,4 +97,15 @@ input[type="submit"] {
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
 	color: transparent;
+}
+
+/* responsive css */
+
+@media (min-width: 991px) {
+	input,
+	textarea,
+	select {
+		padding: 15px 15px;
+		font-size: 14px;
+	}
 }
