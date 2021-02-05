@@ -10,7 +10,7 @@ import GalleryItem from './galleryItem/galleryItem';
 // styles
 import styles from '../../styles/gallery.module.css';
 
-export default function Gallery({rowLimit}) {
+export default function Gallery({rowLimit, withTitle}) {
 
 	const [photoList, updatePhotoList] = useState(0);
 
@@ -131,11 +131,13 @@ export default function Gallery({rowLimit}) {
 		return photos;
 	}
 
+	const title = <SectionTitle smTitle="Delicious" lgTitle="Our Gallery"/>;
+
 	return(
 		<div className={styles.gallery}>
 			<Section>
 				<Container>
-					<SectionTitle smTitle="Delicious" lgTitle="Our Gallery"/>
+					{withTitle ? title: null}
 					<Row>
 						<Col md={12} className="text-center">
 							<div className={styles.list}>
@@ -150,7 +152,8 @@ export default function Gallery({rowLimit}) {
 }
 
 Gallery.propTypes = {
-	rowLimit: PropTypes.object
+	rowLimit: PropTypes.object,
+	withTitle: PropTypes.bool
 };
 
 // temporary data

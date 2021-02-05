@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Head from 'next/head';
 
-
+// components
 import Spinner from '../components/spinner';
 import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
@@ -19,39 +19,58 @@ import Footer from '../components/footer/footer';
 import ToTopBtn from '../components/toTopBtn';
 
 
-export default function Home() {
-	return (
-		<div>
-			<Head>
-				<title> Pizzeola </title>
-				<link rel="shortcut icon" href="/favicon.svg" />
-			</Head>
-			{/* <Spinner/> */}
-			<Header/>
+export default class Home extends Component {
 
-			<Hero/>
+	state = {
+		isLoading: true
+	}
 
-			<AboutUs/>
-			
-			<Menu rowsLimit={1} title/>
+	componentDidMount() {
+		this.setState({
+			isLoading: false
+		});
+	}
 
-			<CTA/>
+	render() {
+		let spinner;
+		this.state.isLoading ? spinner = <Spinner/> : null; 
 
-			<Gallery rowLimit={{mobile: 6, desktop: 2}}/>
+		return (
+			<div>
+				<Head>
+					<title> Pizzeola | Home </title>
+					<link rel="shortcut icon" href="/favicon.svg" />
+				</Head>
 
-			<Testimonial/>
+				{spinner}
 
-			<Ranking/>
-
-			<Blog itemLimit={3} onHomePage/>
-
-			<Location/>
-
-			<Contact/>
-
-			<Footer/>
-
-			<ToTopBtn/>
-		</div>
-	);
+				<Header/>
+	
+				<Hero/>
+	
+				<AboutUs/>
+				
+				<Menu rowsLimit={1} withTitle/>
+	
+				<CTA/>
+	
+				<Gallery rowLimit={{mobile: 6, desktop: 2}} withTitle/>
+	
+				<Testimonial/>
+	
+				<Ranking/>
+	
+				<Blog itemLimit={3} onHomePage/>
+	
+				<Location color={'black'}/>
+	
+				<Contact withTitle/>
+	
+				<Footer/>
+	
+				<ToTopBtn/>
+			</div>
+		);
+	}
+	
 }

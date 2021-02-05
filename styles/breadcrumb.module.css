@@ -1,0 +1,26 @@
+
+/* breadcrumb area */
+
+.breadcrumb {
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-color: #ddd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.breadcrumb h2 {
+	color: #fff;
+}
+
+/* responsive css */
+
+@media (min-width: 767px) {
+	.breadcrumb {
+		height: 400px;
+	}
+}

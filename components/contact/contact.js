@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
@@ -10,6 +11,7 @@ import SectionTitle from '../sectionTitle';
 // styles
 import styles from '../../styles/contact.module.css';
 
+// google map component
 const MyMapComponent = compose(
 	withProps({
 	  googleMapURL: 'https://maps.google.com/maps/api/js?sensor=false',
@@ -28,15 +30,20 @@ const MyMapComponent = compose(
 	</GoogleMap>
   );	
 
-export default function Contact() {
+export default function Contact({withTitle}) {
+
+	const title = (
+		<Row>
+			<Col>
+				<SectionTitle lgTitle="Contact" smTitle="Let's talk"/>
+			</Col>
+		</Row>
+	);
+
 	return(
 		<Section>
 			<Container>
-				<Row>
-					<Col>
-						<SectionTitle lgTitle="Contact" smTitle="Let's talk"/>
-					</Col>
-				</Row>
+				{ withTitle ? title : null}
 				<Row>
 					<Col lg={6} md={6}>
 						<div className={styles.contactForm}>
@@ -44,7 +51,7 @@ export default function Contact() {
 								<input type="text" placeholder="Name"/>
 								<input type="email" placeholder="Email"/>
 								<input type="tel" placeholder="Phone"/>
-								<textarea name="Message" placeholder="Message" cols="30" rows="10"></textarea>
+								<textarea name="Message" placeholder="Message" cols="30" rows="10"/>
 								<input type="submit" value="Submit"/>
 							</form>
 						</div>
@@ -59,3 +66,7 @@ export default function Contact() {
 		</Section>
 	);
 }
+
+Contact.propTypes = {
+	withTitle: PropTypes.bool
+};

@@ -13,7 +13,7 @@ import styles from '../../styles/menu.module.css';
 
 
 
-export default function Menu({rowsLimit, title}) {
+export default function Menu({rowsLimit, withTitle}) {
 
 	function renderRows(items) {
 
@@ -56,28 +56,19 @@ export default function Menu({rowsLimit, title}) {
 		return cols;
 	}
 
-	function renderTitle(title) {
-		if (title) {
-					
-		const titleObj = [];
-
-		titleObj.push(
-			<Row>
-				<Col lg={12} className="text-center">
-					<SectionTitle lgTitle="Choose Yours" smTitle="Pizza Time"/>
-				</Col>
-			</Row>
-		);
-
-		return titleObj;
-		}
-	}
+	const title = (
+		<Row>
+			<Col lg={12} className="text-center">
+				<SectionTitle lgTitle="Choose Yours" smTitle="Pizza Time"/>
+			</Col>
+		</Row>
+	);
 
 	return(
 		<div className={styles.menu}>
 			<Section>
 				<Container>
-					{renderTitle(title)}
+					{withTitle ? title: null}
 					{renderRows(items)}
 				</Container>
 			</Section>
@@ -88,7 +79,8 @@ export default function Menu({rowsLimit, title}) {
 
 Menu.propTypes = {
 	rowsLimit: PropTypes.number,
-	title: PropTypes.bool
+	title: PropTypes.bool,
+	withTitle: PropTypes.bool
 };
 
 // temporary data
